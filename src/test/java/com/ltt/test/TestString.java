@@ -18,4 +18,8 @@ public class TestString {
 		//断言 假
 		assertFalse(StringUtils.isBlank("aaa"));
 	}
+	@Test
+	public void testHaveValue() {
+		assertFalse(StringUtils.haveValue("  "));
+	}
 }	
