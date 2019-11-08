@@ -1,5 +1,6 @@
 package com.ltt.utils;
 
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -60,6 +61,46 @@ public class StringUtils {
 		Pattern p = Pattern.compile(regex);
 		Matcher matcher = p.matcher(str);
 		return matcher.find();
+	}
+	/**
+	 * 
+	 * @Title: getRandomStr 
+	 * @Description: 输出n个英文字符
+	 * @param n
+	 * @return
+	 * @return: String
+	 */
+	public static String getRandomStr(int n) {
+		StringBuilder sb = new StringBuilder();
+		Random random = new Random();
+		for (int i = 0; i < n; i++) {
+			char c = (char)('A'+random.nextInt(26));
+			sb.append(c);
+		}
+		return sb.toString();
+		
+	}
+	/**
+	 * 
+	 * @Title: getRandomStr2 
+	 * @Description: 英文字母和数字
+	 * @param n
+	 * @return
+	 * @return: String
+	 */
+	public static String getRandomStr2(int n) {
+		StringBuilder sb = new StringBuilder();
+		Random random = new Random();
+		for (int i = 0; i < n; i++) {
+			int r = random.nextInt(36);
+			if(r<26) {
+				char c = (char)('A'+r);
+				sb.append(c);
+			}else {
+				sb.append(r-26);
+			}
+		}
+		return sb.toString();
 		
 	}
 }

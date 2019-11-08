@@ -22,4 +22,15 @@ public class TestString {
 	public void testHaveValue() {
 		assertFalse(StringUtils.haveValue("  "));
 	}
+	@Test
+	public void testRandom() {
+		String str = StringUtils.getRandomStr(10);
+		System.out.println(" s is:"+ str);
+	}
+	@Test
+	public void testRam() {
+		String str2 = StringUtils.getRandomStr2(25);
+		System.out.println("str 是："+str2+" 长度是："+str2.length());
+		
+	}
 }	
