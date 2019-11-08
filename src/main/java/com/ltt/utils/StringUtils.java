@@ -16,8 +16,8 @@ public class StringUtils {
 	 * @return: boolean
 	 */
 	public static boolean isBlank(String str) {
-		
-		return (str == null|| str.trim().equals(" "));
+		//trim是去掉两侧的空格
+		return (str == null|| str.trim().equals(""));
 		
 	}
 }
