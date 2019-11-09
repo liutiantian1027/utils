@@ -11,7 +11,7 @@ import com.ltt.utils.DateUtils;
 public class DateTest {
 	@Test
 	public void getDate() {
-		DateUtils.compare(null, new Date());
+		//DateUtils.compare(null, new Date());
 	}
 	@Test
 	public void testAge() {
@@ -20,9 +20,9 @@ public class DateTest {
 		assertTrue(0==DateUtils.calculateAge(date));
 		
 		
-		Date date2 = new Date(-12,11,9);
+		Date date2 = new Date(97,8,2);
 		int age = DateUtils.calculateAge(date2);
-		System.out.println(" age shi " + age);	
+		System.out.println(" 年龄 是 " + age);	
 	}
 	
 	@Test

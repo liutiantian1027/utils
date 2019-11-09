@@ -33,4 +33,9 @@ public class TestString {
 		System.out.println("str 是："+str2+" 长度是："+str2.length());
 		
 	}
+	@Test
+	public void isNumber() {
+		//断言 真
+		assertTrue(StringUtils.isNumber("12.8"));
+	}
 }	

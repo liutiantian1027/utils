@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,11 +20,14 @@ import java.util.List;
 public class FileUtils {
 	public static List<String> reaFile(String fileName) throws IOException{
 		List<String> list = new ArrayList<String>();
-		File file = new File(fileName);
-		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file),"GBK"));
-		String str = null;
-		while((str=reader.readLine())!=null) {
-			list.add(str);
+	
+		InputStream ips = new FileInputStream(fileName);
+		InputStreamReader isr = new InputStreamReader(ips,"GBK");
+		BufferedReader reader = new BufferedReader(isr);
+		String readLine = reader.readLine();
+		while(readLine!=null) {
+			list.add(readLine);
+			readLine=reader.readLine();
 		}
 		return list;
 		
