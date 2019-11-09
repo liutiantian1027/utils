@@ -17,10 +17,10 @@ import java.util.List;
  * @date: 2019年11月9日 上午8:52:10
  */
 public class FileUtils {
-	public static List<String> readLine(String fileName) throws IOException{
+	public static List<String> reaFile(String fileName) throws IOException{
 		List<String> list = new ArrayList<String>();
 		File file = new File(fileName);
-		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file),"GBK"));
 		String str = null;
 		while((str=reader.readLine())!=null) {
 			list.add(str);
