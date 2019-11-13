@@ -16,7 +16,7 @@ public class TestString {
 	@Test
 	public void testIsBlank2() {
 		//断言 假
-		assertFalse(StringUtils.isBlank("aaa"));
+		//assertFalse(StringUtils.isBlank("  "));
 	}
 	@Test
 	public void testHaveValue() {

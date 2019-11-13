@@ -5,6 +5,7 @@ package com.ltt.utils;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
 
 
@@ -17,12 +18,15 @@ public class DateUtils {
 	static final long millionSecondsPerDay = 1000 * 60 * 60 * 24;
 	
 	public static int compare(Date date1,Date date2) {
+		HashMap hashMap = new  HashMap();
 		if(date1== null || date2== null)
 			throw new RuntimeException("参数不能为空");
 		
 		return date1.compareTo(date2);
 		
+		
 	}
+	
 	/**
 	 * 计算年龄
 	 * 
